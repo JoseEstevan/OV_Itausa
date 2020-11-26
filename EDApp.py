@@ -4,33 +4,17 @@ import codecs
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from pandas_profiling import ProfileReport 
-from streamlit_pandas_profiling import st_profile_report
 import streamlit.components.v1 as components
 import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import hyperlink
-import sweetviz as sv
-import st_display
-import webbrowser
-import dtale
-import websocket
-from dtale.app import build_app, get_instance
-from dtale.global_state import cleanup
-from dtale.views import startup
-
-
-def st_display(report_html,width=1250,height=725):
-    report_file = codecs.open(report_html,'r')
-    page = report_file.read()
-    components.html(page,width=width,height=height,scrolling=True)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_option('deprecation.showfileUploaderEncoding', False)
 def main():
-    st.title('EDApp - Data Science')
-    st.subheader('Análise exploratória de dados')
+    st.title('OverView')
+    st.subheader('Ambev')
     file  = st.file_uploader('Escolha o dataset que deseja analisar (.csv)', type = 'csv')
     try:
         file.seek(0)
