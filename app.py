@@ -43,7 +43,7 @@ def main():
         st.subheader('Principais produtos e serviços comercializados pela Itaúsa')
         st.markdown('A atividade principal da Itaúsa é controle e gestão de outras empresas. O principal segmento de atuação da empresa é o setor financeiro, por meio do qual, oferta serviços financeiros básicos, operações de crédito, financiamentos até serviços especializados relativos a investimentos. Além do setor financeiro, a Itaúsa controla empresas dos ramos de papel e celulose, calçados, transporte de gás e tecnologia. A gestão dessas companhias faz da Itaúsa um dos principais conglomerados privados no Brasil.')
         st.image(financ, width=1200)
-        d = {'Receita Líquida': [5.008, 5.375, 4.969, 4.687, 4.885, 5.021, 5.289, 4.883],'Custos': [3.718, 4.006, 3.674, 3.641, 3.731, 3.767, 3.729, 3.567], 'Lucro Líquido': [10.569, 9.710, 8.263, 8.216, 8.994, 8.161, 6.011,  4.836], 'Ano': [20191231, 20181231, 20171231, 20161231, 20151231 ,20141231, 20131231, 20121231]}
+        d = {'Receita Líquida': [5.008, 5.375, 4.969, 4.687, 4.885, 5.021, 5.289, 4.883],'Custos': [-3.718, -4.006, -3.674, -3.641, -3.731, -3.767, -3.729, -3.567], 'Lucro Líquido': [10.569, 9.710, 8.263, 8.216, 8.994, 8.161, 6.011,  4.836], 'Ano': [20191231, 20181231, 20171231, 20161231, 20151231 ,20141231, 20131231, 20121231]}
         datad= pd.DataFrame(data=d)
         datad['Ano'] = datad['Ano'].apply(lambda x: pd.to_datetime(int(x), format="%Y%m%d"))  
         graph1 = px.line(datad,x="Ano", y="Receita Líquida", title='Receita Líquida em Bilhões', height=600, width=1000)
