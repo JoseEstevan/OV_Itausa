@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import os
 import requests
-import matplotlib.pyplot as plt
 import plotly.express as px
 from datetime import datetime, timedelta
 from alpha_vantage.timeseries import TimeSeries
