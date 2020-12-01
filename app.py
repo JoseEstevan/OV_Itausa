@@ -7,7 +7,6 @@ import plotly.express as px
 from datetime import datetime, timedelta
 from alpha_vantage.timeseries import TimeSeries
 from alpha_vantage.cryptocurrencies import CryptoCurrencies
-import plotly.graph_objects as go
 from PIL import Image
 ALPHAVANTAGE_API_KEY = 'H983JJABQU6EEV35'
 ts = TimeSeries(key=ALPHAVANTAGE_API_KEY, output_format='pandas')
