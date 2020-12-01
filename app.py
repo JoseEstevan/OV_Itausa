@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import os
-import markdown
 import requests
 import matplotlib.pyplot as plt
 import plotly.express as px
